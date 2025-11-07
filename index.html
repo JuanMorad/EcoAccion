@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoAcción - Cuidemos el Planeta 🌿</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="EcoAcción: Aprende sobre el cambio climático y comprométete con acciones para proteger nuestro planeta. 🌍">
+  <meta name="keywords" content="medio ambiente, cambio climático, sostenibilidad, reciclaje, ecología, educación ambiental">
+  <meta name="author" content="EcoAcción Team">
+
+  <!-- Color del navegador móvil -->
+  <meta name="theme-color" content="#52b788">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Open Graph sin imágenes -->
+  <meta property="og:title" content="EcoAcción - Cuidemos el Planeta 🌿">
+  <meta property="og:description" content="Infórmate, reflexiona y actúa. EcoAcción te guía en pequeñas acciones que generan un gran impacto ambiental.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tu-dominio-o-repo.com/ecoaccion">
+
+  <!-- Twitter Card sin imágenes -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EcoAcción - Cuidemos el Planeta 🌿">
+  <meta name="twitter:description" content="Explora causas, efectos y soluciones del cambio climático con un enfoque educativo e interactivo.">
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Consecuencias del Cambio Climático</h1>
+      <p class="subtitle">¿Qué es el cambio climático y cómo afecta a nuestro planeta?</p>
+    </header>
+
+    <!-- Sección educativa -->
+    <section class="acciones">
+      <div class="accion-card">
+        <h2>¿Qué es el cambio climático?</h2>
+        <p>
+          El cambio climático es el proceso por el cual el clima del planeta Tierra se está modificando de forma acelerada y desequilibrada.
+          Esto altera temperaturas, lluvias, vientos y estaciones, afectando la vida en todo el mundo.
+        </p>
+        <p>
+          El clima siempre ha cambiado, pero lo diferente ahora es la velocidad y la causa:
+          la actividad humana. Quemamos combustibles fósiles, talamos bosques y producimos más
+          contaminación de la que el planeta puede absorber.
+        </p>
+      </div>
+
+      <div class="accion-card">
+        <h2>Causas principales</h2>
+        <ul class="list">
+          <li><strong>Gases de efecto invernadero (GEI):</strong> Al quemar carbón, petróleo y gas liberamos CO₂, metano y otros gases que atrapan calor en la atmósfera.</li>
+          <li><strong>Deforestación:</strong> Al talar bosques, liberamos CO₂ y perdemos árboles que limpiaban el aire.</li>
+          <li><strong>Ganadería intensiva:</strong> Produce metano (CH₄), un gas que calienta la atmósfera muy rápido.</li>
+          <li><strong>Uso excesivo de recursos:</strong> Sobreexplotar agua, suelos y minerales rompe los ciclos naturales.</li>
+        </ul>
+      </div>
+
+      <div class="accion-card">
+        <h2>Efectos en el planeta</h2>
+        <ul class="list">
+          <li><strong>Calentamiento global:</strong> Cada década es más caliente que la anterior.</li>
+          <li><strong>Derretimiento de glaciares:</strong> Sube el nivel del mar y afecta ciudades costeras.</li>
+          <li><strong>Eventos extremos:</strong> Sequías intensas, huracanes más fuertes, incendios más grandes.</li>
+          <li><strong>Pérdida de biodiversidad:</strong> Especies que no logran adaptarse desaparecen.</li>
+          <li><strong>Impacto humano directo:</strong> Menos agua potable, menos comida segura, más problemas de salud.</li>
+        </ul>
+      </div>
+
+      <div class="accion-card">
+        <h2>¿Qué podemos hacer?</h2>
+        <ul class="list">
+          <li><strong>Energías limpias:</strong> Solar, eólica, geotérmica.</li>
+          <li><strong>Ahorro de energía:</strong> Apagar luces, usar menos aire acondicionado/transporte contaminante.</li>
+          <li><strong>Reducir, reutilizar, reciclar:</strong> Menos desechos de un solo uso.</li>
+          <li><strong>Proteger ecosistemas:</strong> Sembrar árboles, cuidar bosques, no tirar basura en ríos/mar.</li>
+          <li><strong>Educación y presión social:</strong> Hablar del tema, exigir políticas serias, apoyar proyectos sostenibles.</li>
+        </ul>
+      </div>
+
+      <div class="accion-card">
+        <h2>Bolsas reutilizables</h2>
+        <p>
+          Llevar tu propia bolsa de tela al mercado evita las bolsas plásticas de un solo uso.
+          El plástico tarda cientos de años en degradarse y termina en ríos, mares y en la cadena alimenticia.
+        </p>
+        <div class="impacto">Evita ~10 bolsas plásticas por semana ✔</div>
+      </div>
+    </section>
+
+    <!-- Sección "Tus Compromisos" -->
+    <section class="compromisos-section">
+      <div class="compromisos-header">
+        <h2>Tus compromisos ecológicos</h2>
+        <span class="badge-compromisos" id="badge-compromisos">0 compromisos</span>
+      </div>
+
+      <div class="compromisos-items" id="compromisos-items">
+        <div class="compromisos-vacio">
+          Aún no tienes compromisos. ¡Empieza adoptando acciones ecológicas! 🌱
+        </div>
+      </div>
+
+      <div class="impacto-total-section" id="total-section" style="display:none;">
+        <div class="impacto-total">
+          <h3>Impacto total mensual</h3>
+
+          <div class="estadisticas">
+            <div class="stat">
+              <div class="stat-numero" id="total-co2">0</div>
+              <div class="stat-label">kg CO₂ evitados</div>
+            </div>
+            <div class="stat">
+              <div class="stat-numero" id="total-agua">0</div>
+              <div class="stat-label">litros de agua ahorrados</div>
+            </div>
+            <div class="stat">
+              <div class="stat-numero" id="total-bolsas">0</div>
+              <div class="stat-label">bolsas plásticas evitadas</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-compartir" onclick="compartirImpacto()">
+          Compartir mi impacto 🌍
+        </button>
+      </div>
+    </section>
+
+    <!-- Sección de acciones interactivas -->
+    <section class="acciones acciones--compromisos">
+      <!-- Acción: Duchas cortas -->
+      <article class="accion-card">
+        <h2>Reducir tiempo en la ducha 🚿</h2>
+        <p>
+          Duchas más cortas ahorran agua y energía (el agua caliente gasta gas o electricidad).
+        </p>
+
+        <div class="frecuencia-label">Veces por semana</div>
+
+        <div class="frecuencia-control">
+          <button class="btn-frecuencia" onclick="cambiarFrecuencia('ducha', -1)">−</button>
+          <input id="frec-ducha" class="frecuencia-input" type="text" value="1" readonly />
+          <button class="btn-frecuencia" onclick="cambiarFrecuencia('ducha', 1)">+</button>
+        </div>
+
+        <button class="btn-comprometer"
+          onclick="agregarCompromiso('Duchas cortas', 40, 'ducha', '🚿', 'litros')">
+          Me comprometo
+        </button>
+
+        <div class="impacto">~40 litros ahorrados por ducha</div>
+      </article>
+
+      <!-- Acción: Bolsa reutilizable -->
+      <article class="accion-card">
+        <h2>Usar bolsa reutilizable 👜</h2>
+        <p>
+          Evita pedir bolsas plásticas en cada compra. Menos plástico = menos basura en océanos.
+        </p>
+
+        <div class="frecuencia-label">Veces por semana</div>
+
+        <div class="frecuencia-control">
+          <button class="btn-frecuencia" onclick="cambiarFrecuencia('bolsa', -1)">−</button>
+          <input id="frec-bolsa" class="frecuencia-input" type="text" value="1" readonly />
+          <button class="btn-frecuencia" onclick="cambiarFrecuencia('bolsa', 1)">+</button>
+        </div>
+
+        <button class="btn-comprometer"
+          onclick="agregarCompromiso('Bolsa reutilizable', 10, 'bolsa', '👜', 'bolsas plásticas')">
+          Me comprometo
+        </button>
+
+        <div class="impacto">~10 bolsas menos por semana</div>
+      </article>
+
+      <!-- Acción: Ahorrar luz -->
+      <article class="accion-card">
+        <h2>Apagar luces innecesarias 💡</h2>
+        <p>
+          Cada foco apagado cuando no lo usas significa menos energía consumida y menos CO₂ emitido.
+          Ahorro pequeño, impacto grande.
+        </p>
+
+        <div class="frecuencia-label">Veces por semana</div>
+
+        <div class="frecuencia-control">
+          <button class="btn-frecuencia" onclick="cambiarFrecuencia('luz', -1)">−</button>
+          <input id="frec-luz" class="frecuencia-input" type="text" value="1" readonly />
+          <button class="btn-frecuencia" onclick="cambiarFrecuencia('luz', 1)">+</button>
+        </div>
+
+        <button class="btn-comprometer"
+          onclick="agregarCompromiso('Ahorrar luz en casa', 2, 'luz', '💡', 'kg CO₂')">
+          Me comprometo
+        </button>
+
+        <div class="impacto">~2 kg CO₂ menos / semana</div>
+      </article>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

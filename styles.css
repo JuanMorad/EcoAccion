@@ -1,0 +1,453 @@
+/* Reset / base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-grad-start: #a8e6cf;
+    --bg-grad-end: #dcedc1;
+    --green-main: #2d6a4f;
+    --green-accent: #52b788;
+    --green-accent-dark: #40916c;
+    --text-dark: #2d6a4f;
+    --text-body: #444;
+    --text-light: #666;
+    --card-bg: #fff;
+    --soft-bg: #f1faee;
+    --border-soft: #b7e4c7;
+
+    --fs-h1: clamp(1.6rem, 1rem + 2vw, 2.4rem);
+    --fs-h2: clamp(1.05rem, 0.9rem + .4vw, 1.25rem);
+    --fs-body: clamp(0.9rem, 0.8rem + .3vw, 0.95rem);
+    --fs-small: clamp(0.75rem, 0.7rem + .2vw, 0.8rem);
+
+    --radius-card: 15px;
+    --radius-pill: 25px;
+    --shadow-card: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-card-hover: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%);
+    min-height: 100vh;
+    padding: 16px;
+    color: var(--text-dark);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 32px;
+    animation: fadeInDown 0.8s ease;
+    padding: 0 8px;
+}
+
+h1 {
+    color: var(--text-dark);
+    font-size: var(--fs-h1);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--green-accent-dark);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* Grid de tarjetas */
+.acciones {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: start;
+}
+
+@media (min-width: 480px) {
+    .acciones {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .acciones {
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+.acciones--compromisos {
+    margin-top: 40px;
+}
+
+/* Tarjeta */
+.accion-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeIn 0.8s ease;
+    border-left: 5px solid var(--green-accent);
+    display: flex;
+    flex-direction: column;
+}
+.accion-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+@media (min-width: 768px) {
+    .accion-card {
+        padding: 25px;
+    }
+}
+
+.accion-card h2 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-size: var(--fs-h2);
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: left;
+}
+
+.accion-card p {
+    color: var(--text-body);
+    margin-bottom: 14px;
+    line-height: 1.6;
+    font-size: var(--fs-body);
+    font-weight: 400;
+}
+
+.list {
+    margin-left: 18px;
+    margin-bottom: 15px;
+    color: var(--text-body);
+    line-height: 1.5;
+    font-size: var(--fs-body);
+}
+.list li {
+    margin-bottom: 6px;
+}
+
+/* Impacto mini badge */
+.impacto {
+    font-size: var(--fs-body);
+    color: var(--text-dark);
+    font-weight: 600;
+    margin: 12px 0 0;
+    padding: 10px;
+    background: var(--soft-bg);
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid var(--border-soft);
+}
+
+/* Sección compromisos */
+.compromisos-section {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    margin-top: 30px;
+    animation: fadeIn 1s ease;
+}
+
+@media (min-width: 768px) {
+    .compromisos-section {
+        padding: 25px;
+    }
+}
+
+.compromisos-header {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-soft);
+}
+
+.compromisos-header h2 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media (min-width: 480px) {
+    .compromisos-header h2 {
+        font-size: 1.1rem;
+    }
+}
+
+.badge-compromisos {
+    background: var(--green-accent);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: var(--fs-small);
+    font-weight: 500;
+}
+
+.compromisos-items {
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-gutter: stable both-edges;
+}
+
+.compromisos-vacio {
+    text-align: center;
+    padding: 32px;
+    color: #999;
+    font-size: var(--fs-small);
+    line-height: 1.5;
+}
+
+/* Item compromiso */
+.compromiso-item {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: var(--soft-bg);
+    border-radius: 10px;
+    border-left: 4px solid var(--green-accent);
+}
+
+.item-info {
+    flex: 1 1 auto;
+    padding-right: 10px;
+    min-width: 170px;
+}
+
+.item-nombre {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.item-frecuencia {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.item-impacto {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: right;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    min-width: 110px;
+}
+
+.btn-eliminar {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    line-height: 1;
+    font-weight: 600;
+    transition: background 0.25s ease;
+}
+.btn-eliminar:hover {
+    background: #d62828;
+}
+
+/* Totales */
+.impacto-total-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border-soft);
+}
+
+.impacto-total {
+    background: linear-gradient(135deg, var(--green-accent), var(--green-main));
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.impacto-total h3 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.stat-numero {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.stat-label {
+    font-size: var(--fs-small);
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Botones */
+.btn-compartir {
+    background: var(--green-accent);
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: var(--radius-pill);
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.25s ease, transform 0.2s ease;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+}
+.btn-compartir:hover {
+    background: var(--green-accent-dark);
+    transform: scale(1.03);
+}
+
+.btn-comprometer {
+    background: var(--green-main);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--radius-pill);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    text-align: center;
+}
+.btn-comprometer:hover {
+    background: #1b4332;
+    transform: scale(1.03);
+}
+
+/* Control de frecuencia */
+.frecuencia-label {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.frecuencia-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 0 0 15px;
+}
+
+.btn-frecuencia {
+    background: var(--green-accent);
+    color: #fff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease;
+    line-height: 36px;
+    text-align: center;
+}
+.btn-frecuencia:hover {
+    background: var(--green-accent-dark);
+}
+
+.frecuencia-input {
+    width: 48px;
+    text-align: center;
+    font-size: 1rem;
+    border: 2px solid var(--border-soft);
+    border-radius: 6px;
+    padding: 5px;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: #fff;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar custom solo en la lista de compromisos */
+.compromisos-items::-webkit-scrollbar { width: 6px; }
+.compromisos-items::-webkit-scrollbar-thumb {
+    background: var(--border-soft);
+    border-radius: 4px;
+}
+.compromisos-items::-webkit-scrollbar-track {
+    background: #e9f7ef;
+}
+
+/* Ajustes pantallas muy pequeñas */
+@media (max-width: 360px) {
+    body {
+        padding: 12px;
+    }
+
+    .compromiso-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-impacto {
+        text-align: left;
+        min-width: unset;
+        margin-right: 0;
+    }
+
+    .btn-eliminar {
+        align-self: flex-end;
+    }
+}
